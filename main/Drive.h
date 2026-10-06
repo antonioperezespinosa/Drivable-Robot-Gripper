@@ -22,6 +22,13 @@ public:
             turn = 0;
         }
 
+        turn = turn/2;
+     
+        // Reverse steering direction while backing up
+         if (forward < 0) {
+        turn = -turn;
+        }
+
         // Arcade drive mixing
         int left = forward + turn;
         int right = forward - turn;
