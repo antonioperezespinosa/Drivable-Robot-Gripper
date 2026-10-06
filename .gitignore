@@ -55,3 +55,6 @@ ui_*.h
 
 # Vagrant stuff
 .vagrant
+
+.pio/
+*.map
