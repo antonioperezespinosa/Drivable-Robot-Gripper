@@ -1,7 +1,7 @@
 #pragma once
 
 #include <Bluepad32.h>
-
+// Our controls class uses Bluepad32
 class Controls {
 public:
 

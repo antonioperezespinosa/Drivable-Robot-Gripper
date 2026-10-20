@@ -25,7 +25,7 @@ Lift lift(motoron);
 
 
 void setup() {
-
+    Serial.begin(115200);
     // Start I2C communication with Motoron
     // SDA = GPIO 21
     // SCL = GPIO 22
@@ -34,6 +34,13 @@ void setup() {
 
     // Initialize Motoron
     motoron.reinitialize();
+    if (motoron.getLastError() == 0) {
+        Serial.println("Motoron connected!");
+    }
+    else {
+        Serial.println("Motoron connection failed!");
+    }
+
     motoron.clearResetFlag();
 
 
